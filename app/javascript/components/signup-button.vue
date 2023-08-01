@@ -1,12 +1,18 @@
 <template>
-  <button @click="onClick" class="pa2 bg-gold b">Click me</button>
+  <button @click="onClick" class="border-2 border-rose-500 p-10 bg-[#FAC810]">{{text}}</button>
 </template>
 
 <script>
 export default {
-  methods: {
-    onClick () {
-      console.log("Clicked");
+  name: 'Button',
+  props: {
+    text: {
+      type: String,
+      required: true
+    },
+    onClick: {
+      type: Function,
+      default: () => {}
     }
   }
 }
