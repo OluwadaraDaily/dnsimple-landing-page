@@ -1,8 +1,7 @@
 <template>
-  <div class="tc mw5">
-    <img :src="`${imgName}.svg`" width="35" />
-    <p class="f5 lh-copy fw2">{{ description }}</p>
-    <p class="f5 lh-copy fw2">{{ imgName }}</p>
+  <div class="tc flex flex-column items-center">
+    <img :src="`${imgName}.svg`" width="55" class="mb2" />
+    <p class="f5 lh-copy fw3">{{ description }}</p>
   </div>
 </template>
 
