@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick" class="border-2 border-rose-500 p-10 bg-[#FAC810]">{{text}}</button>
+  <button @click="onClick" class="bg-yellow pv3 ph4-l f6 fw6 br3">{{text}}</button>
 </template>
 
 <script>
