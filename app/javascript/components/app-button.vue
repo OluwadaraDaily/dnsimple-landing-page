@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { toggleModal } from '../../assets/javascripts/index.js'
 export default {
   name: 'Button',
   props: {
@@ -14,6 +15,9 @@ export default {
       type: String,
       default: 'button'
     }
+  },
+  beforeCreate() {
+    this.onClick = this.$props.type === 'button' ? toggleModal : () => {};
   }
 }
 </script>
