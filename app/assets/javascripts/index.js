@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       if(modal.style.display === "none") {
         modal.style.display = "block";
         overlay.style.display = "block";
+        window.scrollTo({top: 0, behavior: 'smooth'});
       } else {
         modal.style.display = "none";
         overlay.style.display = "none";
