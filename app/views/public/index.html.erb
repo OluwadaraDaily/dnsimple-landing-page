@@ -1,9 +1,11 @@
+<%= javascript_include_tag('index.js') %>
+
 <!-- Hero Section -->
 <section class="mv5 tc mw8 ml-auto mr-auto">
   <div class="mb2">
-    <p class="f2 fw3 lh-copy mb3">Simplified DNS and Domain Registration Solutions</p>
+    <h1 class="f2 fw3 lh-copy mb3">Simplified DNS and Domain Registration Solutions</h1>
     <p class="f4 fw3 lh-copy center mb4">Secure and Efficient Domain Name System (DNS) Services</p>
-    <app-button text="Get started for free"></app-button>
+    <button id="btn1">Get started for free</button>
   </div>
   <div class="flex items-center justify-between mt5">
     <v-subsection
@@ -36,8 +38,33 @@
 <!-- Call To Action Section -->
 <section class="cover pv6 flex items-center justify-center" style="background-image:url('banana-bg.png')">
   <div class="ba b--black bw2 pv4 ph5 tc bg-white">
-    <p class="f2 lh-header fw3 mb3">DNS Management Made Simple</p>
+    <h2 class="f2 lh-header fw3 mb3">DNS Management Made Simple</h2>
     <p class="f4 lh-copy fw3 mb3">Start Your Online Journey Today</p>
-    <app-button text="Get Started for free"></app-button>
+    <button id="btn2">Get started for free</button>
+
   </div>
 </section>
+
+<!-- Modal -->
+<div class="ba b--black bw2 pa3 w-30 ml-auto mr-auto absolute top-2 bg-white dn" id="modal" style="transform: translateX(-50%); left: 50%; display: none; z-index: 100">
+    <div class="flex justify-end w-100 pointer:hover">
+      <img src="close.svg" alt="" width="35" id="close-tag">
+    </div>
+
+    <form action="/account" class="w-80 ml-auto mr-auto">
+      <p class="f2 fw3 lh-copy mb4">Let's go bananas!</p>
+      <div class="mb4">
+        <label for="email" class="fw6 f6 mb2">Email</label> <br><br>
+        <input type="text" name="email" id="email" class="w-100 ba b--black bw1" required>
+      </div>
+      <div>
+        <label for="password" class="fw6 f6 mb2">Password</label> <br><br>
+        <input type="password" name="password" id="password" class="w-100 ba b--black bw1" required>
+      </div>
+      <div class="mv4 ml-auto mr-auto">
+        <app-button text="Create my account" class="w-100" type="submit"></app-button>
+      </div>
+    </form>
+  </div>
+
+<app-footer></app-footer>

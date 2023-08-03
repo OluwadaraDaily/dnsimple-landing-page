@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick" class="bg-yellow pv3 ph4-l f6 fw6 br3">{{text}}</button>
+  <button class="bg-yellow pv3 ph4-l f6 fw6 br3" :id="id" :type="type">{{text}}</button>
 </template>
 
 <script>
@@ -10,9 +10,13 @@ export default {
       type: String,
       required: true
     },
-    onClick: {
-      type: Function,
-      default: () => {}
+    id: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      default: 'button'
     }
   }
 }

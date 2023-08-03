@@ -1,7 +1,7 @@
 <template>
   <div :class="isReverseFlex ? `flex flex-row-reverse items-center justify-between mw8 ml-auto mr-auto pb6` : `flex items-center justify-between mw8 ml-auto mr-auto pb6`">
     <div class="mw6">
-      <p class="f4 lh-header fw3 mb3 ">{{ title }}</p>
+      <h3 class="f4 lh-header fw3 mb3 ">{{ title }}</h3>
       <p class="f6 lh-copy fw2">{{ subtitle }}</p>
     </div>
     <div>
