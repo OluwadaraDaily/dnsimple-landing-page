@@ -1,22 +1,22 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    const button1 = document.getElementById("btn1")
-    const button2 = document.getElementById("btn2")
-    const closeTag = document.getElementById("close-tag")
-    const modal = document.getElementById("modal")
-    const overlay = document.getElementById("overlay")
+// Define the function to toggle the modal and overlay display
+const toggleModal = () => {
+  const modal = document.getElementById("modal");
+  const overlay = document.getElementById("overlay");
 
-    const toggleModalOnClick = (event) => {
-      if(modal.style.display === "none") {
-        modal.style.display = "block";
-        overlay.style.display = "block";
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      } else {
-        modal.style.display = "none";
-        overlay.style.display = "none";
-      }
-    }
+  if (modal.style.display === "none") {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+  }
+};
 
-    button1.addEventListener('click', toggleModalOnClick);
-    button2.addEventListener('click', toggleModalOnClick);
-    closeTag.addEventListener('click', toggleModalOnClick);
-  })
+// Register the event listener on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  const closeTag = document.getElementById("close-tag");
+  closeTag.addEventListener('click', toggleModal);
+});
+
+export { toggleModal }
