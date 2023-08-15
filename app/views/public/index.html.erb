@@ -1,36 +1,71 @@
-<h1 class="f1 b">You made it!</h1>
+<%= javascript_include_tag('index.js') %>
 
-<div class="lh-copy measure">
-  <h2 class="pt3 pb2 f3 b">The page</h2>
-  <p class="pb3">
-    Welcome to the challenge where you'll be creating a page and a signup form based on the design provided in this <a href="https://miro.com/app/board/uXjVM4hYKh4=/" class="link blue underline">Miro board</a>.
-  </p>
-  <p class="pb3">
-    In your role at DNSimple, you'll be building a sketch or low-fi wireframe from scratch like the one on the Miro board above with the marketing team before you jump to the implementation.
-  </p>
-
-  <h2 class="pt3 pb2 f3 b">CSS Styling</h2>
-  <p class="pb3">
-    Currently, this page uses <a href="http://tachyons.io/" class="link blue underline">Tachyons CSS</a>, the CSS library used at DNSimple.
-  </p>
-  <p class="pb3">
-    If you feel more comfortable using Tailwind CSS,
-    adjust the <code class="f5 bg-light-yellow">app/views/layout/application.html.erb</code> to swap out the CSS libraries.
-    Remove the comment on line 11 and comment line 14.
-  </p>
-  <p class="pb3">
-    We ❤️ functional CSS libraries, and we hope you do as well!
-  </p>
-
-  <h2 class="pt3 pb2 f3 b">The Javascript</h2>
-  <p class="pb3">
-    We have provided a small Vue.js component called "signup-button" for you to work with.
-    Locate the component file in the <code class="f5 bg-light-yellow">app/javascript/components</code> folder.
-  </p>
-  <div class="pt2 pb4">
-    <signup-button></signup-button>
+<!-- Hero Section -->
+<section class="mv5 tc mw8 ml-auto mr-auto">
+  <div class="mb2">
+    <h1 class="f2 fw3 lh-copy mb3">Simplified DNS and Domain Registration Solutions</h1>
+    <p class="f4 fw3 lh-copy center mb4">Secure and Efficient Domain Name System (DNS) Services</p>
+    <app-button text="Get started for free"></app-button>
   </div>
-  <p class="pb3">We're excited for you to take on this challenge! We hope you have fun with it.</p>
-  Best,<br>
-  The team at dnsimple.
+  <div class="flex items-center justify-between mt5">
+    <v-subsection
+      description="Experience Lightning-Fast DNS for Seamless Online Presence!"
+      img-name="bolt"
+    ></v-subsection>
+    <v-subsection
+      description="Effortlessly Secure Your Online Identity with Simplified Domain Registration!"
+      img-name="lock"
+    ></v-subsection>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="pt6 bg-yellow">
+  <h-subsection
+    title="Simple Domain Registration Process"
+    subtitle="Registering your domain has never been easier with our streamlined process.Whether you're a seasoned website owner or just starting your  online journey, we're here to guide you effortlessly and step by step."
+    image="domain"
+  ></h-subsection>
+
+  <h-subsection
+    title="Wide Selection of TLDs and Extensions"
+    subtitle="Choose from a vast selection of top-level domains (TLDs) and extensions to find your perfect match. Whether  you're looking for a traditional .com or a specific industry-focused  TLD, we've got you covered."
+    image="selections"
+    reverse-flex="true"
+  ></h-subsection>
+</section>
+
+<!-- Call To Action Section -->
+<section class="cover pv6 flex items-center justify-center" style="background-image:url('banana-bg.png')">
+  <div class="ba b--black bw2 pv4 ph5 tc bg-white">
+    <h2 class="f2 lh-header fw3 mb3">DNS Management Made Simple</h2>
+    <p class="f4 lh-copy fw3 mb3">Start Your Online Journey Today</p>
+    <app-button text="Get started for free"></app-button>
+
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="ba b--black bw2 pa3 w-30 ml-auto mr-auto absolute top-2 bg-white dn" id="modal" style="transform: translateX(-50%); left: 50%; display: none; z-index: 100">
+  <div class="flex justify-end w-100 pointer:hover">
+    <img src="close.svg" alt="" width="35" id="close-tag">
+  </div>
+
+  <form action="/account" class="w-80 ml-auto mr-auto">
+    <p class="f2 fw3 lh-copy mb4">Let's go bananas!</p>
+    <div class="mb4">
+      <label for="email" class="fw6 f6 mb2">Email</label> <br><br>
+      <input type="email" name="email" id="email" class="w-100 ba b--black bw1" required>
+    </div>
+    <div>
+      <label for="password" class="fw6 f6 mb2">Password</label> <br><br>
+      <input type="password" name="password" id="password" class="w-100 ba b--black bw1" required>
+    </div>
+    <div class="mv4 ml-auto mr-auto">
+      <app-button text="Create my account" class="w-100" type="submit"></app-button>
+    </div>
+  </form>
 </div>
+
+<app-footer></app-footer>

@@ -1,10 +1,15 @@
 
 import initVue from '../components/init-vue.js';
-import SignupButton from '../components/signup-button.vue';
+import AppButton from '../components/app-button.vue';
+import HSubSection from '../components/horizontal-subsection.vue'
+import VSubSection from '../components/vertical-subsection.vue'
+import Footer from '../components/footer.vue'
 
 const components = {
-  'signup-button': SignupButton
+  'app-button': AppButton,
+  'h-subsection': HSubSection,
+  'v-subsection': VSubSection,
+  'app-footer': Footer
 };
 
 initVue(components);
-

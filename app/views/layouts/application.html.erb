@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HiringFrontendMarketingCodeTest</title>
+    <title>BananaDNS</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
-    <!-- Uncomment this line to use Tailwind CSS -->
-    <!-- <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> -->
 
     <!-- Comment this line to not use Tachyons CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -24,12 +21,20 @@
 
       Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
     -->
-
   </head>
 
   <body>
-    <main class="pa4 mw8 center">
+    <main>
+      <header class="pa3 bg-yellow">
+        <%= link_to "/" do %>
+          <div class="flex items-center ml4">
+            <img src="banana.svg" alt="Logo of BananaDNS" width="35" class="mr2">
+            <p class="fw7 f4 lh-title">BananaDNS</p>
+          </div>
+        <% end %>
+      </header>
       <%= yield %>
     </main>
+    <div class="fixed top-0 left-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.8); z-index: 90; display: none;" id="overlay"></div>
   </body>
 </html>
